@@ -12,37 +12,40 @@
 </head>
 <body class="container">
     <header>
-        <div class="container">
+        <div class="container mt-5 position-relative">
             <nav>
                 <label for="menu-toogle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
                 <input type="checkbox" id="menu-toogle" class="menu-toogle">
-                <ul class="nav nav-tabs" id="menu">
+                <nav class="nav nav-tabs" id="menu">
                     <li class="nav-item"><a class="nav-link" href="resumenInventario.html">Inventario</a></li>
                     <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
                     <li class="nav-item"><a class="nav-link" href="proveedores.html">Proveedores</a></li>
                     <li class="nav-item"><a class="nav-link" href="informes.html">Informes</a></li>
                     <li class="nav-item"><a class="nav-link" href="configuracion.html">Configuracion</a></li>
-                </ul>
+                </nav>
             </nav>
         </div>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div>
-                <h1 class="m-4">Resumen de productos</h1>
-            </div>
-            
-            <form class="d-flex m-auto" role="search">
-                <input class="form-control me-2 m-4" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success m-4" type="submit">Buscar</button>
-            </form>
-            <div>
-                <i class="fa-solid fa-user  m-4"></i>
-                <button class="btn btn-danger m-2 float-end m-4" type="submit" value="Submit">Cerrar cesión</button>
-            </div>
-           
-        </nav>
+        <div class="container mt-2 position-relative">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div>
+                    <h1 class="m-4">Resumen de productos</h1>
+                </div>
+                
+                <form class="d-flex m-auto" role="search" id="btnBuscar" name="btnBuscar">
+                    <input class="form-control me-2 m-4" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success m-4" type="submit">Buscar</button>
+                </form>
+                <div>
+                    <i class="fa-solid fa-user mt-4"></i>
+                    <button class="btn btn-success m-2 float-end m-4" type="submit" value="Submit">Cerrar cesión</button>
+                </div>
+               
+            </nav>
+          </div>
+       
     </header>
 
-    <main>
+    <main class="container">
 
         <div class="container">
             <span class="m-4">Ordenar por: </span>
@@ -56,8 +59,51 @@
                 <option value="precio de venta">Precio de Venta</option>
                 <option value="ubicacion">Ubicación</option>
             </select>
-            <button type="button" class="btn btn-danger ms-5">Añadir</button>
-            <button type="button" class="btn btn-danger m-4">Eliminar</button>
+            <button type="button" class="btn btn-warning ms-5" id="btn-anadir">Añadir</button>
+            <button type="button" class="btn btn-success m-4">Eliminar</button>
+            
+        </div>
+
+        <div class="container d-flex justify-content-center position-absolute w-100 top translate mt-5" id="modal">
+            <form class="form-control w-50">
+              <h1 class="text-center">Nuevo Registro de Producto</h1>
+              <div class="form-control border-white">
+                <label for="identificador">Id :</label>
+                <input type="text" class="form-control" id="identificador" placeholder="" required>
+              </div>
+              <div class="form-control border-white">
+                <label for="cantidad">Cantidad :</label>
+                <input type="number" class="form-control" id="cantidad" placeholder="" required>
+              </div>
+              <div class="form-control border-white">
+                <label for="descripcion">Descripción :</label>
+                <input type="text" class="form-control" id="descripcion" placeholder="" required>
+              </div>
+              <div class="form-control border-white">
+                <label for="marca">Marca :</label>
+                <input type="text" class="form-control" id="marca" placeholder="" required>
+              </div>
+              <div class="form-control border-white">
+                <label for="modelo">Modelo :</label>
+                <input type="text" class="form-control" id="modelo" placeholder="" required>
+              </div>
+              <div class="form-control border-white">
+                <label for="precioCompra">Precio de Compra :</label>
+                <input type="text" class="form-control" id="precioCompra" placeholder="" required>
+              </div>
+              <div class="form-control border-white">
+                <label for="precioVenta">Precio de Venta :</label>
+                <input type="text" class="form-control" id="precioVenta" placeholder="" required>
+              </div>
+              <div class="form-control border-white">
+                <label for="ubicacion">Ubicacón :</label>
+                <input type="text" class="form-control" id="ubicacion" placeholder="" required>
+              </div>
+              <div class="form-control border-white">
+                <button class="btn btn-primary">Guardar</button>
+              </div>
+            </form>
+            <button class="position-absolute btn btn-danger close">Cerrar</button>
         </div>
 
         <div class="container">
@@ -130,6 +176,8 @@
     <script src="productos.js"></script>
 
     
+    
+      
    
 </body>
 </html>
