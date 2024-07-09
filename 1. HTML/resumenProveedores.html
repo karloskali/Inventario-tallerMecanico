@@ -3,32 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resumen de Inventario</title>
-    <link rel="stylesheet" href="reset.css">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-     <link rel="stylesheet" href="css/bootstrap.min.css">
-  
+    <title>Resumen de Proveedores</title>
+    <link rel="stylesheet" href="../2. CSS/reset.css">
+    <link rel="stylesheet" href="../2. CSS/style.css">
 </head>
-<body class="container">
+<body>
     <header>
         <div class="caja">
             <nav>
-                <ul class="nav nav-tabs">
-                    <li class="nav-item"><a class="nav-link" href="resumenInventario.html">Inventario</a></li>
-                    <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="proveedores.html">Proveedores</a></li>
-                    <li class="nav-item"><a class="nav-link" href="informes.html">Informes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="configuracion.html">Configuracion</a></li>
+                <ul>
+                    <li><a href="resumenInventario.html">Inventario</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="resumenProveedores.html">Proveedores</a></li>
+                    <li><a href="">Informes</a></li>
+                    <li><a href="">Configuración</a></li>
                 </ul>
             </nav>
         </div>
         <nav class="caja2">
             <div>
-                <h1>Resumen de productos</h1>
+                <h1>Resumen de Proveedores</h1>
             </div>
             
             <div>
                 <input type="text" class="busqueda" placeholder="Buscar"> 
+            </div>
+
+            <div>
+                <button id="botonLogout" type="submit">
+                    <span>Cerrar sesión</span>
+                </button>
             </div>
             
         </nav>
@@ -48,16 +52,16 @@
         </div>
        
 
-        <table class="table table-striped" border="6">
+        <table>
             <tr>
-                <th>ID</th>
-                <th>CANTIDAD</th>
-                <th>DESCRIPCION</th>
-                <th>MARCA</th>
-                <th>MODELO</th>
-                <th>PRECIO DE COMPAÑIA</th>
-                <th>PRECIO DE VENTA</th>
-                <th>UBICACION</th>
+                <th>NIT</th>
+                <th>NOMBRE</th>
+                <th>DIRECCIÓN</th>
+                <th>E-MAIL</th>
+                <th>TELEFONO</th>
+                <th>CAMARA DE COMERCIO</th>
+                <th>RUT</th>
+                <th>CERTIFICADO BANCARIO</th>
             </tr>
             <tr>
                 <td>Dato 1</td>
@@ -94,11 +98,8 @@
     
     </main>
 
-    <script src="js/bootstrap.min.js"></script>
-
     <footer class="copyright">
         &copy; Copyright taller lubrillantas - 2024
-    </footer>
-   
+    </footer>    
 </body>
 </html>

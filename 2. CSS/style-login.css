@@ -31,3 +31,32 @@
     box-shadow: 0 30px 60px 0 rgba(192, 21, 21, 0.3);
     text-align: center;
   }
+
+  form{
+    margin: 40px 0;
+  }
+  
+  form label, form legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+  }
+
+  .input-padron{
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+  }
+
+  #botonLogin{
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color:white;
+    background:red;
+    border:none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor:pointer;
+  }
