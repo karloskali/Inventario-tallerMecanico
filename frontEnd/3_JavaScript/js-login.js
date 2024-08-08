@@ -1,3 +1,3 @@
 document.getElementById('botonLogin').addEventListener('click', function(){
-    window.location.href="resumenInventario.html";
+   window.location.href="../1_Html/resumenInventario.html";
 });

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen de Proveedores</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../2_Css/reset.css">
+    <link rel="stylesheet" href="../2_Css/style-productos.css">
+    <link rel="stylesheet" href="../2_Css/cssBoostrap/bootstrap.min.css">
+    
+</head>
+
+<body class="container">
+
+    <header>
+
+        <div class="container mt-5 position-relative">
+            <nav>
+                <label for="menu-toogle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
+                <input type="checkbox" id="menu-toogle" class="menu-toogle">
+                <nav class="nav nav-tabs" id="menu">
+                     <li class="nav-item"><a class="nav-link" href="../1_Html/resumenInventario.html">Inventario</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../1_Html/productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../1_Html/resumenProveedores.html">Proveedores</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Informes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="">Configuración</a></li>
+                </nav> 
+            </nav>
+        </div>
+        <div class="container mt-2 position-relative">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div>
+                    <h1 class="m-4">Resumen de Proveedores</h1>
+                </div>
+
+                <form class="d-flex m-auto" role="search" id="btnBuscar" name="btnBuscar">
+                    <input class="form-control me-2 m-4" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success m-4" type="submit">Buscar</button>
+                </form>
+                <div>
+                    <i class="fa-solid fa-user mt-4"></i>
+                    <button class="btn btn-success m-2 float-end m-4" type="submit" value="Submit">Cerrar cesión</button>
+                </div>
+            </nav>
+        </div>
+            
+    </header>
+
+     <main class="container">
+
+        <div class="container">
+            <span class="m-4">Ordenar por: </span>
+            <select class="m-4">
+                <option value="id">ID</option>
+                <option value="cantidad">Cantidad</option>
+                <option value="descripcion">Descripcion</option>
+                <option value="marca">Marca</option>
+                <option value="modelo">Modelo</option>
+                <option value="precio de compra">Precio de Compra</option>
+                <option value="precio de venta">Precio de Venta</option>
+                <option value="ubicacion">Ubicación</option>
+            </select>
+            <button type="button" class="btn btn-warning ms-5" id="btn-anadir">Añadir</button>
+            <button type="button" class="btn btn-success m-4">Eliminar</button>
+            
+        </div>
+
+        <div class="container d-flex justify-content-center position-absolute w-100 top translate mt-5" id="modal">
+            <form class="form-control w-50">
+              <h1 class="text-center">Nuevo Registro de Producto</h1>
+              <div class="form-control border-white">
+                <label for="identificador">Id :</label>
+                <input type="text" class="form-control" id="identificador" placeholder="" required>
+              </div>
+              <div class="form-control border-white">
+                <label for="cantidad">Cantidad :</label>
+                <input type="number" class="form-control" id="cantidad" placeholder="" required>
+              </div>
+              <div class="form-control border-white">
+                <label for="descripcion">Descripción :</label>
+                <input type="text" class="form-control" id="descripcion" placeholder="" required>
+              </div>
+              <div class="form-control border-white">
+                <label for="marca">Marca :</label>
+                <input type="text" class="form-control" id="marca" placeholder="" required>
+              </div>
+              <div class="form-control border-white">
+                <label for="modelo">Modelo :</label>
+                <input type="text" class="form-control" id="modelo" placeholder="" required>
+              </div>
+              <div class="form-control border-white">
+                <label for="precioCompra">Precio de Compra :</label>
+                <input type="text" class="form-control" id="precioCompra" placeholder="" required>
+              </div>
+              <div class="form-control border-white">
+                <label for="precioVenta">Precio de Venta :</label>
+                <input type="text" class="form-control" id="precioVenta" placeholder="" required>
+              </div>
+              <div class="form-control border-white">
+                <label for="ubicacion">Ubicacón :</label>
+                <input type="text" class="form-control" id="ubicacion" placeholder="" required>
+              </div>
+              <div class="form-control border-white">
+                <button class="btn btn-primary">Guardar</button>
+              </div>
+            </form>
+            <button class="position-absolute btn btn-danger close">Cerrar</button>
+        </div>
+
+        <div class="container">
+            <table class="table table-hover container table-bordered border-primary p-4 m-4 text-lg-center">
+                <thead class="table-danger">
+                    <tr>
+                        <th scope="col" class="fw-bold">ID</th>
+                        <th scope="col" class="fw-bold">CANTIDAD</th>
+                        <th scope="col" class="fw-bold">DESCRIPCION</th>
+                        <th scope="col" class="fw-bold">MARCA</th>
+                        <th scope="col" class="fw-bold">MODELO</th>
+                        <th scope="col" class="fw-bold">PRECIO DE COMPRA</th>
+                        <th scope="col" class="fw-bold">PRECIO DE VENTA</th>
+                        <th scope="col" class="fw-bold">UBICACION</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    <tr >
+                        <th scope="row" class="table-danger fw-bold">Dato 1</th>
+                        <td>Dato 2</td>
+                        <td>Dato 3</td>
+                        <td>Dato 4</td>
+                        <td>Dato 5</td>
+                        <td>Dato 6</td>
+                        <td>Dato 7</td>
+                        <td>Dato 8</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="table-danger fw-bold">Dato 9</th>
+                        <td>Dato 10</td>
+                        <td>Dato 11</td>
+                        <td>Dato 12</td>
+                        <td>Dato 13</td>
+                        <td>Dato 14</td>
+                        <td>Dato 15</td>
+                        <td>Dato 16</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="table-danger fw-bold">Dato 17</th>
+                        <td>Dato 18</td>
+                        <td>Dato 19</td>
+                        <td>Dato 20</td>
+                        <td>Dato 21</td>
+                        <td>Dato 22</td>
+                        <td>Dato 23</td>
+                        <td>Dato 24</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+       
+    </main>
+
+    <footer class="container text-center">
+
+        &copy; Copyright taller lubrillantas - 2024
+
+    </footer>
+    
+    <script src="../3_JavaScript/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../3_JavaScript/productos.js"></script>
+
+</body>
+</html>
