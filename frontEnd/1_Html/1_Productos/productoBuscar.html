@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resumen de Inventario</title>
+    <title>Buscar | Producto</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../2_Css/reset.css">
-    <link rel="stylesheet" href="../2_Css/style.css">
-    <link rel="stylesheet" href="../2_Css/cssBoostrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../2_Css/reset.css">
+    <link rel="stylesheet" href="../../2_Css/style-productos.css">
+    <link rel="stylesheet" href="../../2_Css/cssBoostrap/bootstrap.min.css">
 </head>
 <body>
     <header>
@@ -17,12 +17,12 @@
                 <input type="checkbox" id="menu-toogle" class="menu-toogle">
                 <nav id="menu">
                     <ul class="nav nav-tabs" id="menu">
-                        <li class="nav-item"><a class="nav-link" href="../1_Html/resumenInventario.html">Inventario</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../resumenInventario.html">Inventario</a></li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Productos</a>
                             <ul class="dropdown nav-link">
-                                <li><a href="1_Productos/productoNuevo.html">Nuevo</a></li>
-                                <li><a href="1_Productos/productoBuscar.html">Buscar</a></li>
+                                <li><a href="productoNuevo.html">Nuevo</a></li>
+                                <li><a href="productoBuscar.html">Buscar</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -57,7 +57,7 @@
         <div class="container mt-2 position-relative">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div>
-                    <h1 class="m-4">Resumen de inventario</h1>
+                    <h1 class="m-4">Resumen de productos</h1>
                 </div>
                 
                 <form class="d-flex m-auto" role="search" id="btnBuscar" name="btnBuscar">
@@ -72,29 +72,11 @@
             </nav>
           </div>
     </header>
-
     <main>
-        <div class="box_principal">
-            <ul class="productos box">
-                <li >
-                    <h2>Recepciones</h2>
-                    <p class="producto-descripcion"></p>
-                </li>
-                <li>
-                    <h2>Expediciones</h2>
-                    <p class="producto-descripcion"></p>
-                </li>
-                <li>
-                    <img src="" alt="">
-                </li>
-            </ul>
-        </div>
-        
+
     </main>
-    
     <footer>
-        <p class="copyright">&copy Copyright taller lubrillantas - 2024</p>
+
     </footer>
-    <script src="../3_JavaScript/js_Inventario.js"></script>
 </body>
 </html>

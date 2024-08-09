@@ -32,6 +32,11 @@
     text-align: center;
   }
 
+  #logoEmpresa {
+    margin:.4rem;
+    width: 55%;
+  }
+
   form{
     margin: 40px 0;
   }
