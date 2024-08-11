@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resumen de Inventario</title>
+    <title>Buscar | Producto</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../2_Css/reset.css">
-    <link rel="stylesheet" href="../2_Css/style.css">
-    <link rel="stylesheet" href="../2_Css/cssBoostrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../2_Css/reset.css">
+    <link rel="stylesheet" href="../../2_Css/style-productos.css">
+    <link rel="stylesheet" href="../../2_Css/cssBoostrap/bootstrap.min.css">
 </head>
 <body>
     <header>
@@ -17,13 +17,13 @@
                 <input type="checkbox" id="menu-toogle" class="menu-toogle">
                 <nav id="menu">
                     <ul class="nav nav-tabs" id="menu">
-                        <li class="nav-item"><a class="nav-link" href="../1_Html/resumenInventario.html">Inventario</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../resumenInventario.html">Inventario</a></li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Productos</a>
                             <ul class="dropdown nav-link">
-                                <li><a href="1_Productos/productoNuevo.html">Nuevo</a></li>
-                                <li><a href="1_Productos/productoListar.html">Listar</a></li>
-                                <li><a href="1_Productos/productoBuscar.html">Buscar</a></li>
+                                <li><a href="productoNuevo.html">Nuevo</a></li>
+                                <li><a href="productoListar.html">Listar</a></li>
+                                <li><a href="productoBuscar.html">Buscar</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -58,44 +58,41 @@
         <div class="container mt-2 position-relative">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div>
-                    <h1 class="m-4">Resumen de inventario</h1>
+                    <h1 class="m-4">Listar Productos</h1>
                 </div>
                 
-                <form class="d-flex m-auto" role="search" id="btnBuscar" name="btnBuscar">
-                    <input class="form-control me-2 m-4" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success m-4" type="submit">Buscar</button>
-                </form>
-                <div>
+                <div class="ms-auto d-flex align-items-center">
                     <i class="fa-solid fa-user mt-4"></i>
-                    <button class="btn btn-success m-2 float-end m-4" type="submit" value="Submit">Cerrar cesión</button>
+                    <button class="btn btn-success ms-2" type="submit" value="Submit">Cerrar sesión</button>
                 </div>
-               
             </nav>
-          </div>
-    </header>
-
-    <main>
-        <div class="box_principal">
-            <ul class="productos box">
-                <li >
-                    <h2>Recepciones</h2>
-                    <p class="producto-descripcion"></p>
-                </li>
-                <li>
-                    <h2>Expediciones</h2>
-                    <p class="producto-descripcion"></p>
-                </li>
-                <li>
-                    <img src="" alt="">
-                </li>
-            </ul>
         </div>
-        
-    </main>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row mt-1">
+                <div class="col-md-1"></div>
+                <div class="col-md-10 bg-white">
+                    <div id="listado_productos">
     
-    <footer>
-        <p class="copyright">&copy Copyright taller lubrillantas - 2024</p>
+                    </div>
+                </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    
+
+    </main>
+    <footer class="container text-center">
+
+        &copy; Copyright taller lubrillantas - 2024
+
     </footer>
-    <script src="../3_JavaScript/js_Inventario.js"></script>
+
+    <script src="../3_JavaScript/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../3_JavaScript/productos.js"></script>
+    <script>listar_productos();</script>
 </body>
 </html>

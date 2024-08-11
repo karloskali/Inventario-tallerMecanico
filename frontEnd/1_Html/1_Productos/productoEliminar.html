@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar | Producto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../2_Css/reset.css">
+    <link rel="stylesheet" href="../../2_Css/style-productos.css">
+    <link rel="stylesheet" href="../../2_Css/cssBoostrap/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <div class="container mt-5 position-relative">
+            <nav>
+                <label for="menu-toogle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
+                <input type="checkbox" id="menu-toogle" class="menu-toogle">
+                <nav id="menu">
+                    <ul class="nav nav-tabs" id="menu">
+                        <li class="nav-item"><a class="nav-link" href="../resumenInventario.html">Inventario</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Productos</a>
+                            <ul class="dropdown nav-link">
+                                <li><a href="productoNuevo.html">Nuevo</a></li>
+                                <li><a href="productoListar.html">Listar</a></li>
+                                <li><a href="productoBuscar.html">Buscar</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Proveedores</a>
+                            <ul class="dropdown nav-link">
+                                <li><a href="#">Nuevo</a></li>
+                                <li><a href="#">Buscar</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Informes</a>
+                            <ul class="dropdown nav-link">
+                                <li><a href="#">Informe de stock</a></li>
+                                <li><a href="#">Informe de ventas</a></li>
+                                <li><a href="#">Informe de compra</a></li>
+                                <li><a href="#">Informe de movimientos de inventario</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Configuración</a>
+                            <ul class="dropdown nav-link">
+                                <li><a href="#">Gestión de usuario</a></li>
+                                <li><a href="#">Ajustes</a></li>
+                                <li><a href="#">gestión de almacenes</a></li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </nav>
+            </nav>
+        </div>
+        <div class="container mt-2 position-relative">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div>
+                    <h1 class="m-4">Eliminar Productos</h1>
+                </div>
+                
+                <div class="ms-auto d-flex align-items-center">
+                    <i class="fa-solid fa-user mt-4"></i>
+                    <button class="btn btn-success ms-2" type="submit" value="Submit">Cerrar sesión</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row mt-1">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">Eliminar Producto</div>
+                        <div class="card-body">
+                            <form action="" id="formEliminar">
+                                <input type="hidden" name="id" id="id"> 
+                                <div class="alert alert-danger">
+                                    <div id="producto_eliminar"></div>
+                                </div>
+    
+                            </form>
+                        </div>
+                        <div class="card-footer bg-warning">
+                            <button class="btn btn-danger" onclick="eliminar_producto();">Eliminar</button>
+                            <button class="btn btn-secondary" onclick="window.location.href = 'productoListar.html';">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+       
+
+
+    </main>
+    <footer class="container text-center">
+
+        &copy; Copyright taller lubrillantas - 2024
+
+    </footer>
+
+    <script src="../3_JavaScript/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../3_JavaScript/productos.js"></script>
+    <script>
+        let idProducto = getQueryVariable("id");
+        pre_eliminar_producto(idProducto);
+    </script>
+</body>
+</html>
