@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscar | Producto</title>
+    <title>Gestión de Usuarios</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../../2_Css/reset.css">
     <link rel="stylesheet" href="../../2_Css/style-productos.css">
@@ -21,9 +21,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Productos</a>
                             <ul class="dropdown nav-link">
-                                <li><a href="productoNuevo.html">Nuevo</a></li>
-                                <li><a href="productoListar.html">Listar</a></li>
-                                <li><a href="productoBuscar.html">Buscar</a></li>
+                                <li><a href="../1_Productos/productoNuevo.html">Nuevo</a></li>
+                                <li><a href="../1_Productos/productoListar.html">Listar</a></li>
+                                <li><a href="../1_Productos/productoBuscar.html">Buscar</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -46,9 +46,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Configuración</a>
                             <ul class="dropdown nav-link">
-                                <li><a href="../4_Configuración/GestionUsuario.html">Gestión de usuario</a></li>
-                                <li><a href="../4_Configuración/Ajustes.html">Ajustes</a></li>
-                                <li><a href="../4_Configuración/GestionAlmacen.html">Gestión de almacenes</a></li>
+                                <li><a href="GestionUsuario.html">Gestión de usuario</a></li>
+                                <li><a href="Ajustes.html">Ajustes</a></li>
+                                <li><a href="GestionAlmacen.html">gestión de almacenes</a></li>
                             </ul>
                         </li>
                         
@@ -59,7 +59,7 @@
         <div class="container mt-2 position-relative">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div>
-                    <h1 class="m-4">Listar Productos</h1>
+                    <h1 class="m-4">Gestión de Usuarios</h1>
                 </div>
                 
                 <div class="ms-auto d-flex align-items-center">
@@ -67,33 +67,34 @@
                     <button class="btn btn-success ms-2" type="submit" value="Submit">Cerrar sesión</button>
                 </div>
             </nav>
-        </div>
+          </div>
     </header>
-    <main>
-        <div class="container">
-            <div class="row mt-1">
-                <div class="col-md-1"></div>
-                <div class="col-md-10 bg-white">
-                    <div id="listado_productos">
-    
-                    </div>
-                </div>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
+    <main class="container mt-5">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre de Usuario</th>
+                        <th>Rol</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se agregarán dinámicamente las filas de usuarios -->
+                </tbody>
+            </table>
         </div>
-    
-
+        <div class="mt-4">
+            <button class="btn btn-primary" onclick="agregarUsuario()">Agregar Usuario</button>
+        </div>
     </main>
-    <footer class="container text-center">
-
+    <footer class="container text-center mt-5">
         &copy; Copyright taller lubrillantas - 2024
-
     </footer>
 
     <script src="../3_JavaScript/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="../3_JavaScript/productos.js"></script>
-    <script>listar_productos();</script>
+    <script src="../3_JavaScript/usuarios.js"></script>
 </body>
 </html>

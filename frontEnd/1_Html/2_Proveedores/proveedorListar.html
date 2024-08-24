@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscar | Producto</title>
+    <title>Listar | Proveedores</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../../2_Css/reset.css">
     <link rel="stylesheet" href="../../2_Css/style-productos.css">
@@ -21,17 +21,17 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Productos</a>
                             <ul class="dropdown nav-link">
-                                <li><a href="productoNuevo.html">Nuevo</a></li>
-                                <li><a href="productoListar.html">Listar</a></li>
-                                <li><a href="productoBuscar.html">Buscar</a></li>
+                                <li><a href="../1_Productos/productoNuevo.html">Nuevo</a></li>
+                                <li><a href="../1_Productos/productoListar.html">Listar</a></li>
+                                <li><a href="../1_Productos/productoBuscar.html">Buscar</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Proveedores</a>
                             <ul class="dropdown nav-link">
-                                <li><a href="../2_Proveedores/proveedorNuevo.html">Nuevo</a></li>
-                                <li><a href="../2_Proveedores/proveedorListar.html">Listar</a></li> 
-                                <li><a href="../2_Proveedores/proveedorBuscar.html">Buscar</a></li>
+                                <li><a href="proveedorNuevo.html">Nuevo</a></li>
+                                <li><a href="proveedorListar.html">Listar</a></li> <!-- Nuevo enlace añadido -->
+                                <li><a href="proveedorBuscar.html">Buscar</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -51,7 +51,6 @@
                                 <li><a href="../4_Configuración/GestionAlmacen.html">Gestión de almacenes</a></li>
                             </ul>
                         </li>
-                        
                     </ul>
                 </nav>
             </nav>
@@ -59,7 +58,7 @@
         <div class="container mt-2 position-relative">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div>
-                    <h1 class="m-4">Listar Productos</h1>
+                    <h1 class="m-4">Listar Proveedores</h1>
                 </div>
                 
                 <div class="ms-auto d-flex align-items-center">
@@ -74,7 +73,7 @@
             <div class="row mt-1">
                 <div class="col-md-1"></div>
                 <div class="col-md-10 bg-white">
-                    <div id="listado_productos">
+                    <div id="listado_proveedores">
     
                     </div>
                 </div>
@@ -93,7 +92,8 @@
 
     <script src="../3_JavaScript/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="../3_JavaScript/productos.js"></script>
-    <script>listar_productos();</script>
+    <script src="../3_JavaScript/proveedores.js"></script>
+    <script>listar_proveedores();</script>
 </body>
 </html>
+

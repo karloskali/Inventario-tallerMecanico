@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar | Proveedor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../2_Css/reset.css">
+    <link rel="stylesheet" href="../../2_Css/style-productos.css">
+    <link rel="stylesheet" href="../../2_Css/cssBoostrap/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <div class="container mt-5 position-relative">
+            <nav>
+                <label for="menu-toogle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
+                <input type="checkbox" id="menu-toogle" class="menu-toogle">
+                <nav id="menu">
+                    <ul class="nav nav-tabs" id="menu">
+                        <li class="nav-item"><a class="nav-link" href="../resumenInventario.html">Inventario</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Productos</a>
+                            <ul class="dropdown nav-link">
+                                <li><a href="../1_Productos/productoNuevo.html">Nuevo</a></li>
+                                <li><a href="../1_Productos/productoListar.html">Listar</a></li>
+                                <li><a href="../1_Productos/productoBuscar.html">Buscar</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Proveedores</a>
+                            <ul class="dropdown nav-link">
+                                <li><a href="proveedorNuevo.html">Nuevo</a></li>
+                                <li><a href="proveedorListar.html">Listar</a></li> <!-- Nuevo enlace añadido -->
+                                <li><a href="proveedorBuscar.html">Buscar</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Informes</a>
+                            <ul class="dropdown nav-link">
+                                <li><a href="../3_Informes/InformeStock.html">Informe de stock</a></li>
+                                <li><a href="../3_Informes/InformeVentas.html">Informe de ventas</a></li>
+                                <li><a href="../3_Informes/InformeCompras.html">Informe de compra</a></li>
+                                <li><a href="../3_Informes/InformeMovimientos.html">Informe de movimientos de inventario</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Configuración</a>
+                            <ul class="dropdown nav-link">
+                                <li><a href="../4_Configuración/GestionUsuario.html">Gestión de usuario</a></li>
+                                <li><a href="../4_Configuración/Ajustes.html">Ajustes</a></li>
+                                <li><a href="../4_Configuración/GestionAlmacen.html">Gestión de almacenes</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </nav>
+        </div>
+        <div class="container mt-2 position-relative">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div>
+                    <h1 class="m-4">Editar Proveedores</h1>
+                </div>
+                
+                <div class="ms-auto d-flex align-items-center">
+                    <i class="fa-solid fa-user mt-4"></i>
+                    <button class="btn btn-success ms-2" type="submit" value="Submit">Cerrar sesión</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row mt-1">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">Editar Proveedor</div>
+                        <div class="card-body">
+                            <form action="" id="formEditar">
+
+                                <input type="hidden" name="id" id="id"> 
+
+                                <div class="mb-3">
+                                    <label for="nit" class="form-label">NIT</label>
+                                    <input type="text" name="nit" id="nit" class="form-control">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Nombre</label>
+                                    <input type="text" name="nombre" id="nombre" class="form-control">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="direccion" class="form-label">Dirección</label>
+                                    <input type="text" name="direccion" id="direccion" class="form-control">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="telefono" class="form-label">Teléfono</label>
+                                    <input type="tel" name="telefono" id="telefono" class="form-control">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="camaraComercio" class="form-label">Cámara de Comercio</label>
+                                    <input type="text" name="camaraComercio" id="camaraComercio" class="form-control">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="rut" class="form-label">RUT</label>
+                                    <input type="text" name="rut" id="rut" class="form-control">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="certificadoBancario" class="form-label">Certificado Bancario</label>
+                                    <input type="text" name="certificadoBancario" id="certificadoBancario" class="form-control">
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="card-footer bg-warning">
+                            <button class="btn btn-success" onclick="actualizar_proveedor();">Guardar</button>
+                            <button class="btn btn-secondary" onclick="window.location.href = 'proveedorListar.html';">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </main>
+    <footer class="container text-center">
+
+        &copy; Copyright taller lubrillantas - 2024
+
+    </footer>
+
+    <script src="../3_JavaScript/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../3_JavaScript/proveedores.js"></script>
+    <script>
+        let idProveedor = getQueryVariable("id");
+        obtener_proveedor(idProveedor);
+    </script>
+</body>
+</html>

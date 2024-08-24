@@ -21,9 +21,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Productos</a>
                             <ul class="dropdown nav-link">
-                                <li><a href="productoNuevo.html">Nuevo</a></li>
-                                <li><a href="productoListar.html">Listar</a></li>
-                                <li><a href="productoBuscar.html">Buscar</a></li>
+                                <li><a href="../1_Productos/productoNuevo.html">Nuevo</a></li>
+                                <li><a href="../1_Productos/productoListar.html">Listar</a></li>
+                                <li><a href="../1_Productos/productoBuscar.html">Buscar</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -37,10 +37,10 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Informes</a>
                             <ul class="dropdown nav-link">
-                                <li><a href="../3_Informes/InformeStock.html">Informe de stock</a></li>
-                                <li><a href="../3_Informes/InformeVentas.html">Informe de ventas</a></li>
-                                <li><a href="../3_Informes/InformeCompras.html">Informe de compra</a></li>
-                                <li><a href="../3_Informes/InformeMovimientos.html">Informe de movimientos de inventario</a></li>
+                                <li><a href="InformeStock.html">Informe de stock</a></li>
+                                <li><a href="InformeVentas.html">Informe de ventas</a></li>
+                                <li><a href="InformeCompras.html">Informe de compra</a></li>
+                                <li><a href="InformeMovimientos.html">Informe de movimientos de inventario</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -48,7 +48,7 @@
                             <ul class="dropdown nav-link">
                                 <li><a href="../4_Configuración/GestionUsuario.html">Gestión de usuario</a></li>
                                 <li><a href="../4_Configuración/Ajustes.html">Ajustes</a></li>
-                                <li><a href="../4_Configuración/GestionAlmacen.html">Gestión de almacenes</a></li>
+                                <li><a href="../4_Configuración/GestionAlmacen.html">gestión de almacenes</a></li>
                             </ul>
                         </li>
                         
@@ -57,33 +57,34 @@
             </nav>
         </div>
         <div class="container mt-2 position-relative">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div>
-                    <h1 class="m-4">Listar Productos</h1>
-                </div>
-                
-                <div class="ms-auto d-flex align-items-center">
-                    <i class="fa-solid fa-user mt-4"></i>
-                    <button class="btn btn-success ms-2" type="submit" value="Submit">Cerrar sesión</button>
-                </div>
-            </nav>
+          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+              <div>
+                  <h1 class="m-4">Informe de Stock</h1>
+              </div>
+              
+              <div class="ms-auto d-flex align-items-center">
+                  <i class="fa-solid fa-user mt-4"></i>
+                  <button class="btn btn-success ms-2" type="submit" value="Submit">Cerrar sesión</button>
+              </div>
+          </nav>
         </div>
     </header>
-    <main>
-        <div class="container">
-            <div class="row mt-1">
-                <div class="col-md-1"></div>
-                <div class="col-md-10 bg-white">
-                    <div id="listado_productos">
-    
-                    </div>
-                </div>
-                </div>
-                <div class="col-md-1"></div>
-            </div>
+    <main class="container mt-5">
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Producto ID</th>
+                        <th>Cantidad</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se agregarán dinámicamente las filas de datos -->
+                </tbody>
+            </table>
         </div>
-    
-
     </main>
     <footer class="container text-center">
 
@@ -94,6 +95,5 @@
     <script src="../3_JavaScript/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="../3_JavaScript/productos.js"></script>
-    <script>listar_productos();</script>
 </body>
 </html>
