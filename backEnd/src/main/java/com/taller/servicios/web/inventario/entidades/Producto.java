@@ -1,5 +1,7 @@
 package com.taller.servicios.web.inventario.entidades;
 
+import org.springframework.lang.NonNull;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,12 +10,16 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="Productos")
+@Table(name="producto")
 public class Producto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @Column(name = "nombre", nullable = false, length = 100)
+    @NonNull
+    private String nombre;
 
     @Column(name="cantidad")
     private int cantidad;
