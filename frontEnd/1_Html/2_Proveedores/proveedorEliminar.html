@@ -13,47 +13,54 @@
     <header>
         <div class="container mt-5 position-relative">
             <nav>
-                <label for="menu-toogle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
-                <input type="checkbox" id="menu-toogle" class="menu-toogle">
-                <nav id="menu">
-                    <ul class="nav nav-tabs" id="menu">
-                        <li class="nav-item"><a class="nav-link" href="../resumenInventario.html">Inventario</a></li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Productos</a>
-                            <ul class="dropdown nav-link">
-                                <li><a href="../1_Productos/productoNuevo.html">Nuevo</a></li>
-                                <li><a href="../1_Productos/productoListar.html">Listar</a></li>
-                                <li><a href="../1_Productos/productoBuscar.html">Buscar</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Proveedores</a>
-                            <ul class="dropdown nav-link">
-                                <li><a href="proveedorNuevo.html">Nuevo</a></li>
-                                <li><a href="proveedorListar.html">Listar</a></li> <!-- Nuevo enlace añadido -->
-                                <li><a href="proveedorBuscar.html">Buscar</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Informes</a>
-                            <ul class="dropdown nav-link">
-                                <li><a href="../3_Informes/InformeStock.html">Informe de stock</a></li>
-                                <li><a href="../3_Informes/InformeVentas.html">Informe de ventas</a></li>
-                                <li><a href="../3_Informes/InformeCompras.html">Informe de compra</a></li>
-                                <li><a href="../3_Informes/InformeMovimientos.html">Informe de movimientos de inventario</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Configuración</a>
-                            <ul class="dropdown nav-link">
-                                <li><a href="../4_Configuración/GestionUsuario.html">Gestión de usuario</a></li>
-                                <li><a href="../4_Configuración/Ajustes.html">Ajustes</a></li>
-                                <li><a href="../4_Configuración/GestionAlmacen.html">Gestión de almacenes</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
+                <label for="menu-toggle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item"><a class="nav-link" href="../resumenInventario.html">Inventario</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="productosDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Productos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="productosDropdown">
+                            <li><a class="dropdown-item" href="../1_Productos/productoNuevo.html">Nuevo</a></li>
+                            <li><a class="dropdown-item" href="../1_Productos/productoListar.html">Listar</a></li>
+                            <li><a class="dropdown-item" href="../1_Productos/productoBuscar.html">Buscar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="proveedoresDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Proveedores
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="proveedoresDropdown">
+                            <li><a class="dropdown-item" href="proveedorNuevo.html">Nuevo</a></li>
+                            <li><a class="dropdown-item" href="proveedorListar.html">Listar</a></li>
+                            <li><a class="dropdown-item" href="proveedorBuscar.html">Buscar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="informesDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Informes
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="informesDropdown">
+                            <li><a class="dropdown-item" href="../3_Informes/InformeStock.html">Informe de stock</a></li>
+                            <li><a class="dropdown-item" href="../3_Informes/InformeVentas.html">Informe de ventas</a></li>
+                            <li><a class="dropdown-item" href="../3_Informes/InformeCompras.html">Informe de compra</a></li>
+                            <li><a class="dropdown-item" href="../3_Informes/InformeMovimientos.html">Informe de movimientos de inventario</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="configDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Configuración
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="configDropdown">
+                            <li><a class="dropdown-item" href="../4_Configuración/GestionUsuario.html">Gestión de usuario</a></li>
+                            <li><a class="dropdown-item" href="../4_Configuración/Ajustes.html">Ajustes</a></li>
+                            <li><a class="dropdown-item" href="../4_Configuración/GestionAlmacen.html">Gestión de almacenes</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </nav>
+            
         </div>
         <div class="container mt-2 position-relative">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">

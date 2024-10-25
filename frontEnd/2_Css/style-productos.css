@@ -1,28 +1,83 @@
-/* Tablas de Productos y proveedores*/
-
+/* Tablas de Productos y proveedores */
 .menu-icon {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .menu-toogle {
-    display: none;
+  display: none;
 }
 
-.top{
-    top: 5%;
-    height: 100vh;
-    background-color: rgba(155, 216, 245, 0.8);
-    display: grid;
-    place-items: center;
-    transition: .4s;
-  }
-  .close{
-    top: -4em;
-    left: 68%;
-  }
-  .translate{
-    transform: translateY(-125%);
-  }
- 
+.top {
+  top: 5%;
+  height: 100vh;
+  background-color: rgba(155, 216, 245, 0.8);
+  display: grid;
+  place-items: center;
+  transition: .4s;
+}
+
+.close {
+  top: -4em;
+  left: 68%;
+}
+
+.translate {
+  transform: translateY(-125%);
+}
+
+/* Color de fondo rosado para el menú y submenú */
+.navbar {
+  background-color: #ff66b2; /* Rosado */
+}
+
+/* Color de los enlaces del menú */
+.navbar-nav .nav-link {
+  color: black; /* Cambiado a negro */
+  font-weight: bold; /* Letra en negrita */
+  font-size: 18px; /* Tamaño más grande para que parezca subtítulo */
+  padding: 10px 15px; /* Ajusta el padding según sea necesario */
+}
+
+/* Hover en los enlaces del menú principal */
+.navbar-nav .nav-link:hover {
+  background-color: #ff99cc; /* Un rosado más claro al pasar el mouse */
+  color: black; /* Mantener el texto negro en hover */
+}
+
+/* Para los elementos del submenú */
+.dropdown-menu {
+  background-color: #ff66b2; /* Asegúrate de que el fondo del submenú sea rosado */
+}
+
+.dropdown-item {
+  color: black; /* Asegúrate que el color base sea negro */
+  padding: 10px 15px; /* Ajusta el padding para el submenú */
+}
+
+/* Hover específico para el submenú */
+.dropdown-item:hover {
+  background-color: lightblue !important; /* Azul claro solo para el submenú */
+  color: black; /* Mantener el texto negro en hover */
+}
+
+/* Para mostrar el dropdown al pasar el ratón por encima */
+.nav-item:hover .dropdown-menu {
+  display: block; /* Muestra el menú desplegable al pasar el ratón */
+}
+
+.dropdown-menu {
+  margin-top: 0; /* Quita el espacio extra por defecto en el dropdown */
+  border: none; /* Sin borde para el dropdown */
+  display: none; /* Oculta el submenú inicialmente */
+}
+
+/* Estilo para el navbar expandido */
+.navbar-nav {
+  flex-grow: 1; /* Permite que los elementos se expandan */
+}
+
+.nav-item {
+  flex: 1; /* Cada item ocupa el mismo espacio */
+}
