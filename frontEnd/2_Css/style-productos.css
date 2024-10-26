@@ -1,4 +1,89 @@
-/* Tablas de Productos y proveedores */
+/* Fondo rosado claro para toda la página */
+body {
+  background-color: #fa70b3 !important; 
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo para el navbar */
+.navbar {
+  background-color: #ff66b2;
+}
+
+/* Estilo para los enlaces del menú */
+.navbar-nav .nav-link {
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 15px;
+}
+
+/* Hover en los enlaces del menú principal */
+.navbar-nav .nav-link:hover {
+  background-color: #ff99cc;
+  color: black;
+}
+
+/* Estilo para el submenú */
+.dropdown-menu {
+  background-color: #ff66b2;
+}
+
+.dropdown-item {
+  color: black;
+  padding: 10px 15px;
+}
+
+.dropdown-item:hover {
+  background-color: lightblue !important;
+  color: black;
+}
+
+/* Mostrar el dropdown al pasar el ratón por encima */
+.nav-item:hover .dropdown-menu {
+  display: block;
+}
+
+/* Estilo para el navbar expandido */
+.navbar-nav {
+  flex-grow: 1;
+}
+
+.nav-item {
+  flex: 1;
+}
+
+/* Ajuste del contenedor de la tabla */
+.table-container {
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+  margin: 0 auto; /* Centra el contenedor */
+  padding: 0 15px;
+}
+
+.table {
+  width: 100%;
+  text-align: center;
+  table-layout: auto; 
+  border-collapse: collapse; 
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table th {
+  font-weight: bold;
+  background-color: #ff99cc;
+}
+
+.table td {
+  background-color: #fff;
+}
+
+/* Clases originales mantenidas */
 .menu-icon {
   display: none;
   font-size: 30px;
@@ -27,57 +112,10 @@
   transform: translateY(-125%);
 }
 
-/* Color de fondo rosado para el menú y submenú */
-.navbar {
-  background-color: #ff66b2; /* Rosado */
+/* Estilos adicionales */
+.is-invalid {
+  border: 1px solid red;
 }
 
-/* Color de los enlaces del menú */
-.navbar-nav .nav-link {
-  color: black; /* Cambiado a negro */
-  font-weight: bold; /* Letra en negrita */
-  font-size: 18px; /* Tamaño más grande para que parezca subtítulo */
-  padding: 10px 15px; /* Ajusta el padding según sea necesario */
-}
 
-/* Hover en los enlaces del menú principal */
-.navbar-nav .nav-link:hover {
-  background-color: #ff99cc; /* Un rosado más claro al pasar el mouse */
-  color: black; /* Mantener el texto negro en hover */
-}
 
-/* Para los elementos del submenú */
-.dropdown-menu {
-  background-color: #ff66b2; /* Asegúrate de que el fondo del submenú sea rosado */
-}
-
-.dropdown-item {
-  color: black; /* Asegúrate que el color base sea negro */
-  padding: 10px 15px; /* Ajusta el padding para el submenú */
-}
-
-/* Hover específico para el submenú */
-.dropdown-item:hover {
-  background-color: lightblue !important; /* Azul claro solo para el submenú */
-  color: black; /* Mantener el texto negro en hover */
-}
-
-/* Para mostrar el dropdown al pasar el ratón por encima */
-.nav-item:hover .dropdown-menu {
-  display: block; /* Muestra el menú desplegable al pasar el ratón */
-}
-
-.dropdown-menu {
-  margin-top: 0; /* Quita el espacio extra por defecto en el dropdown */
-  border: none; /* Sin borde para el dropdown */
-  display: none; /* Oculta el submenú inicialmente */
-}
-
-/* Estilo para el navbar expandido */
-.navbar-nav {
-  flex-grow: 1; /* Permite que los elementos se expandan */
-}
-
-.nav-item {
-  flex: 1; /* Cada item ocupa el mismo espacio */
-}
