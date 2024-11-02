@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscar | Producto</title>
+    <title>Editar | Producto</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../../2_Css/reset.css">
     <link rel="stylesheet" href="../../2_Css/style-productos.css">
@@ -71,10 +71,9 @@
                 <div>
                     <h1 class="m-4">Editar Productos</h1>
                 </div>
-                
                 <div class="ms-auto d-flex align-items-center">
                     <i class="fa-solid fa-user mt-4"></i>
-                    <button class="btn btn-success ms-2" type="submit" value="Submit">Cerrar sesión</button>
+                    <button class="btn btn-success ms-2" type="submit">Cerrar sesión</button>
                 </div>
             </nav>
         </div>
@@ -88,44 +87,47 @@
                         <div class="card-header bg-primary text-white">Editar Producto</div>
                         <div class="card-body">
                             <form action="" id="formEditar">
-    
-                                <input type="hidden" name="id" id="id"> 
-    
+                                <input type="hidden" name="id" id="id">
+                                
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label">Nombre</label>
+                                    <input type="text" name="nombre" id="nombre" class="form-control" required>
+                                </div>
+                                
                                 <div class="mb-3">
                                     <label for="cantidad" class="form-label">Cantidad</label>
-                                    <input type="number" name="cantidad" id="cantidad" class="form-control">
+                                    <input type="number" name="cantidad" id="cantidad" class="form-control" required>
                                 </div>
                                 
                                 <div class="mb-3">
                                     <label for="descripcion" class="form-label">Descripción</label>
-                                    <input type="text" name="descripcion" id="descripcion" class="form-control">
+                                    <input type="text" name="descripcion" id="descripcion" class="form-control" required>
                                 </div>
                                 
                                 <div class="mb-3">
                                     <label for="marca" class="form-label">Marca</label>
-                                    <input type="text" name="marca" id="marca" class="form-control">
+                                    <input type="text" name="marca" id="marca" class="form-control" required>
                                 </div>
                                 
                                 <div class="mb-3">
                                     <label for="modelo" class="form-label">Modelo</label>
-                                    <input type="text" name="modelo" id="modelo" class="form-control">
+                                    <input type="text" name="modelo" id="modelo" class="form-control" required>
                                 </div>
                                 
                                 <div class="mb-3">
-                                    <label for="precioCompra" class="form-label">Precio de Compra</label>
-                                    <input type="number" name="precioCompra" id="precioCompra" class="form-control">
-                                </div>
-                                
-                                <div class="mb-3">
-                                    <label for="precioVenta" class="form-label">Precio de Venta</label>
-                                    <input type="number" name="precioVenta" id="precioVenta" class="form-control">
+                                    <label for="precio" class="form-label">Precio</label>
+                                    <input type="number" name="precio" id="precio" class="form-control" required>
                                 </div>
                                 
                                 <div class="mb-3">
                                     <label for="ubicacion" class="form-label">Ubicación</label>
-                                    <input type="text" name="ubicacion" id="ubicacion" class="form-control">
+                                    <input type="text" name="ubicacion" id="ubicacion" class="form-control" required>
                                 </div>
-    
+                                
+                                <div class="mb-3">
+                                    <label for="stock" class="form-label">Stock</label>
+                                    <input type="number" name="stock" id="stock" class="form-control" required>
+                                </div>
                             </form>
                         </div>
                         <div class="card-footer bg-warning">
@@ -139,19 +141,16 @@
         </div>
     </main>
     <footer class="container text-center">
-
         &copy; Copyright taller lubrillantas - 2024
-
     </footer>
 
-    <script src="../3_JavaScript/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="../3_JavaScript/productos.js"></script>
+    <script src="../../3_JavaScript/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <script src="../../3_JavaScript/productos.js"></script>
     <script>
         let idProducto = getQueryVariable("id");
-        //console.log(idProducto);
+        console.log(idProducto);
         obtener_producto(idProducto);
-
     </script>
 </body>
 </html>
