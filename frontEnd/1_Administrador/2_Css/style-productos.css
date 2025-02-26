@@ -1,6 +1,41 @@
+#menuSecundario{
+  justify-content: space-between;
+}
+/* estilo de los botones del menu de gestion usuario */
+
+.botonesPanelLateral{
+  width: 100%;
+  background-color: #3498db;
+  color: black;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 8px 0;
+  text-align: left;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  size: 50px;
+  color: white;
+  cursor: pointer;
+  transition: backgroud-color 0.3s ease, transform 0.2s ease;
+  }
+  /* efecto hover en los botones*/
+  a:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+  }
+
+  /* efecto active en los botones*/
+  a:active {
+    background-color: #1c5985;
+    transform: scale(0.98);
+  }
+
 /* Fondo rosado claro para toda la página */
 body {
-  background-color: #fa70b3 !important; 
+  background-color: #fcfafb !important; 
   font-family: Arial, sans-serif;
   min-height: 100vh;
   margin: 0;
@@ -9,7 +44,7 @@ body {
 
 /* Estilo para el navbar */
 .navbar {
-  background-color: #ff66b2;
+  background-color: white;
 }
 
 /* Estilo para los enlaces del menú */
@@ -22,13 +57,13 @@ body {
 
 /* Hover en los enlaces del menú principal */
 .navbar-nav .nav-link:hover {
-  background-color: #ff99cc;
+  background-color: white;
   color: black;
 }
 
 /* Estilo para el submenú */
 .dropdown-menu {
-  background-color: #ff66b2;
+  background-color: white;
 }
 
 .dropdown-item {
@@ -76,7 +111,7 @@ body {
 
 .table th {
   font-weight: bold;
-  background-color: #ff99cc;
+  background-color: white;
 }
 
 .table td {
@@ -97,7 +132,7 @@ body {
 .top {
   top: 5%;
   height: 100vh;
-  background-color: rgba(155, 216, 245, 0.8);
+  background-color: rgba(245, 155, 155, 0.8);
   display: grid;
   place-items: center;
   transition: .4s;

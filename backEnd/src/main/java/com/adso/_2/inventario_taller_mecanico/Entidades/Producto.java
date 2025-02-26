@@ -1,10 +1,13 @@
 package com.adso._2.inventario_taller_mecanico.Entidades;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -38,6 +41,10 @@ public class Producto {
 
     @Column(name = "descripcion", nullable = false)
     private String Descripcion;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_proveedor", referencedColumnName = "id")
+    private Proveedor proveedor;
 
     // Getters and Setters
     // ...
@@ -113,5 +120,15 @@ public class Producto {
     public void setDescripcion(String descripcion) {
         Descripcion = descripcion;
     }
+
+    public Proveedor getProveedor() {
+        return proveedor;
+    }
+
+    public void setProveedor(Proveedor proveedor) {
+        this.proveedor = proveedor;
+    }
+
+
     
 }

@@ -32,7 +32,7 @@ public class AjustesController {
 
     @CrossOrigin(origins = "*")
     @GetMapping("/{id}")
-    public ResponseEntity<?> listarAjusteById(@PathVariable(value = "id") Integer id){
+    public ResponseEntity<?> listarAjusteById(@PathVariable Integer id){
         Optional<Ajuste> ajustes = servicio.buscarPorId(id);
         if (ajustes.isPresent()) {
             return ResponseEntity.ok(ajustes);
@@ -54,7 +54,7 @@ public class AjustesController {
 
     @CrossOrigin(origins = "*")
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> eliminarAjuste(@PathVariable(value="id") Integer id){
+    public ResponseEntity<?> eliminarAjuste(@PathVariable Integer id){
         Optional<Ajuste> ajuste = servicio.buscarPorId(id);
         if (ajuste.isPresent()) {
             servicio.eliminar(id);

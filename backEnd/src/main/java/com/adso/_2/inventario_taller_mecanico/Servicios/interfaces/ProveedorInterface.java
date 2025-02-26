@@ -11,6 +11,8 @@ public interface ProveedorInterface {
     public Optional<Proveedor> buscarPorId(Integer id);
     public Proveedor guardar(Proveedor proveedor);
     public void eliminar(Integer id);
+
+    public Optional<Proveedor> findByNombre(String Nombre);
     
 }
 

@@ -32,7 +32,7 @@ public class InformeMovimientosController {
 
     @CrossOrigin(origins = "*")
     @GetMapping("/{id}")
-    public ResponseEntity<?> listarInformeMovimientoById(@PathVariable(value = "id") Integer id) {
+    public ResponseEntity<?> listarInformeMovimientoById(@PathVariable Integer id) {
         Optional<InformeMovimientos> informeMovimiento = servicio.buscarPorId(id);
         if (informeMovimiento.isPresent()) {
             return ResponseEntity.ok(informeMovimiento);
@@ -54,7 +54,7 @@ public class InformeMovimientosController {
 
     @CrossOrigin(origins = "*")
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> eliminarInformeMovimiento(@PathVariable(value = "id") Integer id) {
+    public ResponseEntity<?> eliminarInformeMovimiento(@PathVariable Integer id) {
         Optional<InformeMovimientos> informeMovimiento = servicio.buscarPorId(id);
         if (informeMovimiento.isPresent()) {
             servicio.eliminar(id);

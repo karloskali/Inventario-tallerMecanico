@@ -32,7 +32,7 @@ public class InformeStockController {
 
     @CrossOrigin(origins = "*")
     @GetMapping("/{id}")
-    public ResponseEntity<?> listarInformeStockById(@PathVariable(value = "id") Integer id) {
+    public ResponseEntity<?> listarInformeStockById(@PathVariable Integer id) {
         Optional<InformeStock> informeStock = servicio.buscarPorId(id);
         if (informeStock.isPresent()) {
             return ResponseEntity.ok(informeStock);
@@ -54,7 +54,7 @@ public class InformeStockController {
 
     @CrossOrigin(origins = "*")
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> eliminarInformeStock(@PathVariable(value = "id") Integer id) {
+    public ResponseEntity<?> eliminarInformeStock(@PathVariable Integer id) {
         Optional<InformeStock> informeStock = servicio.buscarPorId(id);
         if (informeStock.isPresent()) {
             servicio.eliminar(id);

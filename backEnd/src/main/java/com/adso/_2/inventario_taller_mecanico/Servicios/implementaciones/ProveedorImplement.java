@@ -28,6 +28,11 @@ public class ProveedorImplement implements ProveedorInterface {
         return repositorio.findById(id);
     }
 
+    @Override
+    public Optional<Proveedor> findByNombre(String Nombre){
+        return repositorio.findByNombre(Nombre);
+    }
+
      @Override
     public Proveedor guardar(Proveedor proveedor){
         return repositorio.save(proveedor);

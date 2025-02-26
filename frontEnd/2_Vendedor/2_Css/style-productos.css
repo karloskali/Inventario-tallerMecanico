@@ -1,0 +1,121 @@
+/* Fondo rosado claro para toda la página */
+body {
+  background-color: #fcfafb !important; 
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo para el navbar */
+.navbar {
+  background-color: white;
+}
+
+/* Estilo para los enlaces del menú */
+.navbar-nav .nav-link {
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 15px;
+}
+
+/* Hover en los enlaces del menú principal */
+.navbar-nav .nav-link:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Estilo para el submenú */
+.dropdown-menu {
+  background-color: white;
+}
+
+.dropdown-item {
+  color: black;
+  padding: 10px 15px;
+}
+
+.dropdown-item:hover {
+  background-color: lightblue !important;
+  color: black;
+}
+
+/* Mostrar el dropdown al pasar el ratón por encima */
+.nav-item:hover .dropdown-menu {
+  display: block;
+}
+
+/* Estilo para el navbar expandido */
+.navbar-nav {
+  flex-grow: 1;
+}
+
+.nav-item {
+  flex: 1;
+}
+
+/* Ajuste del contenedor de la tabla */
+.table-container {
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+  margin: 0 auto; /* Centra el contenedor */
+  padding: 0 15px;
+}
+
+.table {
+  width: 100%;
+  text-align: center;
+  table-layout: auto; 
+  border-collapse: collapse; 
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table th {
+  font-weight: bold;
+  background-color: white;
+}
+
+.table td {
+  background-color: #fff;
+}
+
+/* Clases originales mantenidas */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.menu-toogle {
+  display: none;
+}
+
+.top {
+  top: 5%;
+  height: 100vh;
+  background-color: rgba(155, 216, 245, 0.8);
+  display: grid;
+  place-items: center;
+  transition: .4s;
+}
+
+.close {
+  top: -4em;
+  left: 68%;
+}
+
+.translate {
+  transform: translateY(-125%);
+}
+
+/* Estilos adicionales */
+.is-invalid {
+  border: 1px solid red;
+}
+
+
+

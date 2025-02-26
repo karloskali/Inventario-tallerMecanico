@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -32,7 +33,7 @@ public class ProveedorController {
 
     @CrossOrigin(origins = "*")
     @GetMapping("/{id}")
-    public ResponseEntity<?> listarProveedorById(@PathVariable(value = "id") Integer id) {
+    public ResponseEntity<?> listarProveedorById(@PathVariable Integer id) {
         Optional<Proveedor> proveedor = servicio.buscarPorId(id);
         if (proveedor.isPresent()) {
             return ResponseEntity.ok(proveedor);
@@ -47,6 +48,12 @@ public class ProveedorController {
     }
 
     @CrossOrigin(origins = "*")
+    @PatchMapping
+    public ResponseEntity<?> findByNombre(@RequestBody Proveedor proveedor){
+        return ResponseEntity.ok(servicio.findByNombre(proveedor.getNombre()));
+    }
+
+    @CrossOrigin(origins = "*")
     @PutMapping
     public ResponseEntity<?> editarProveedor(@RequestBody Proveedor proveedor) {
         return ResponseEntity.ok(servicio.guardar(proveedor));
@@ -54,7 +61,7 @@ public class ProveedorController {
 
     @CrossOrigin(origins = "*")
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> eliminarProveedor(@PathVariable(value = "id") Integer id) {
+    public ResponseEntity<?> eliminarProveedor(@PathVariable Integer id) {
         Optional<Proveedor> proveedor = servicio.buscarPorId(id);
         if (proveedor.isPresent()) {
             servicio.eliminar(id);

@@ -4,46 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="2_Css/style-login.css">
+    <link rel="stylesheet" href="1_Administrador/2_Css/style-login.css">
 </head>
 <body>
     <div class="wrapper">
         <div id="formContent">
             <main>
                 <section>
-                    <h1><img id="logoEmpresa" src="4_Imagenes/log.jpg" alt="Logo de la empresa"></h1>
+                    <h1><img id="logoEmpresa" src="1_Administrador/4_Imagenes/log.jpg" alt="Logo de la empresa"></h1>
                     <h2>Inicia sesión</h1>
-                    <form>
+                    <form id="formLogin">
                         <div>
-                            <div>
-                                <label for="email">Correo electrónico</label>
-                            </div>
-                            <div>
-                                <div>
-                                    <input type="email" id="login" class="input-padron" required placeholder="Escribe tu correo electrónico" autofocus name="email">
-                                </div>
-                            </div>
-
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="user" class="input-padron" required placeholder="Escribe tu correo electrónico" autofocus name="user">
                         </div>
                         <div>
-                           <div>
                             <label for="password">Contraseña</label>
-                           </div>
-                        </div>
-                        <div>
-                            <div>
-                                <input type="password" placeholder="Escribe tu contraseña" class="input-padron" autocomplete="off" name="password">
-                            </div>                                
-                        </div>
-                        <button id="botonLogin" type="submit">
+                            <input type="password" id="password" placeholder="Escribe tu contraseña" class="input-padron" autocomplete="off" name="password">
+                        </div>                                
+                        <button id="botonLogin">
                             <span>Iniciar sesión</span>
                         </button>
                     </form>
                 </section>
             </main>
          </div>
-    </div>            
-    <script src="3_JavaScript/js-login.js"></script>
+    </div>
+    <script src="1_Administrador/3_JavaScript/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>          
+    <script src="1_Administrador/3_JavaScript/js-login.js"></script>
 </body>
 </html>
 

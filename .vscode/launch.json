@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-InventarioTallerMecanicoApplication<inventario_taller_mecanico>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.adso._2.inventario_taller_mecanico.InventarioTallerMecanicoApplication",
+            "projectName": "inventario_taller_mecanico",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

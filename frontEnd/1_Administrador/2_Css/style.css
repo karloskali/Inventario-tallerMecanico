@@ -1,0 +1,48 @@
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.menu-toogle {
+    display: none;
+}
+
+main {
+background-color: gray;
+}
+
+
+
+.box_principal {
+  display: flex;
+  height: 350px;
+  align-items: center;
+}
+
+.box{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  
+  
+}
+
+/*.top{
+    top: 5%;
+    height: 100vh;
+    background-color: rgba(155, 216, 245, 0.8);
+    display: grid;
+    place-items: center;
+    transition: .4s;
+  }
+  .close{
+    top: -4em;
+    left: 68%;
+  }
+  .translate{
+    transform: translateY(-125%);
+  }*/
+
+ 

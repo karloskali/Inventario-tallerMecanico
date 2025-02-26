@@ -18,6 +18,9 @@ public class Proveedor {
     @Column(name="nombre")
     private String nombre;
 
+    @Column(name="nit")
+    private String nit;
+
     @Column(name="direccion")
     private String direccion;
 
@@ -27,14 +30,9 @@ public class Proveedor {
     @Column(name="telefono")
     private String telefono;
 
-    @Column(name="camara_comercio")
-    private String camaraComercio;
+    //@OneToMany(mappedBy= "proveedor", cascade = CascadeType.ALL,orphanRemoval=true)
+    //private List<Producto> productos;
 
-    @Column(name="rut")
-    private String rut;
-
-    @Column(name="certificado_bancario")
-    private String certificadoBancario;
 
     // Getters and Setters
     // ...
@@ -65,6 +63,14 @@ public class Proveedor {
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+    
+    public String getNit() {
+        return nit;
+    }
+
+    public void setNit(String nit) {
+        this.nit = nit;
     }
 
     /**
@@ -109,46 +115,14 @@ public class Proveedor {
         this.telefono = telefono;
     }
 
-    /**
-     * @return String return the camaraComercio
-     */
-    public String getCamaraComercio() {
-        return camaraComercio;
-    }
+    //public List<Producto> getProductos() {
+        //return productos;
+    //}
 
-    /**
-     * @param camaraComercio the camaraComercio to set
-     */
-    public void setCamaraComercio(String camaraComercio) {
-        this.camaraComercio = camaraComercio;
-    }
+    //public void setProductos(List<Producto> productos) {
+        //this.productos = productos;
+    //}
 
-    /**
-     * @return String return the rut
-     */
-    public String getRut() {
-        return rut;
-    }
-
-    /**
-     * @param rut the rut to set
-     */
-    public void setRut(String rut) {
-        this.rut = rut;
-    }
-
-    /**
-     * @return String return the certificadoBancario
-     */
-    public String getCertificadoBancario() {
-        return certificadoBancario;
-    }
-
-    /**
-     * @param certificadoBancario the certificadoBancario to set
-     */
-    public void setCertificadoBancario(String certificadoBancario) {
-        this.certificadoBancario = certificadoBancario;
-    }
+    
 
 }

@@ -14,8 +14,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.adso._2.inventario_taller_mecanico.DTO.ProductoDTO;
 import com.adso._2.inventario_taller_mecanico.Entidades.Producto;
 import com.adso._2.inventario_taller_mecanico.Servicios.interfaces.ProductoInterface;
+
+import jakarta.persistence.EntityNotFoundException;
 
 
 @RestController
@@ -33,7 +36,7 @@ public class ProductoController {
 
     @CrossOrigin(origins = "*")
     @GetMapping("/{id}")
-    public ResponseEntity<?> listarProductosById(@PathVariable(value = "id") Integer id){
+    public ResponseEntity<?> listarProductosById(@PathVariable Integer id){
         Optional<Producto> producto = servicio.buscarPorId(id);
         if (producto.isPresent()) {
             return ResponseEntity.ok(producto);
@@ -49,18 +52,39 @@ public class ProductoController {
     }
 
     @CrossOrigin(origins = "*")
-    @PutMapping
-    public ResponseEntity<?> editarProducto(@RequestBody Producto producto){
-        return ResponseEntity.ok(servicio.guardar(producto));
+    @PutMapping("/{id}")
+    public ResponseEntity<Producto> editarProducto(@PathVariable Integer id, @RequestBody ProductoDTO productoDTO) {
+        try {
+            Producto productoActualizado = servicio.editarProducto(id, productoDTO);
+            return ResponseEntity.ok(productoActualizado);
+        } catch (EntityNotFoundException e) {
+            return ResponseEntity.notFound().build();
+        }
     }
+
+/*
+ * @CrossOrigin(origins = "*")
+    @PutMapping("/{id}")
+    public ResponseEntity<Producto> editarProducto(@PathVariable Integer id, @RequestBody ProductoDTO productoDTO) {
+        Producto productoActualizado = servicio.editarProducto(id, productoDTO);
+        return ResponseEntity.ok(productoActualizado);
+    }
+ */
+    
+
+    //@CrossOrigin(origins = "*")
+    //@PutMapping
+    //public ResponseEntity<?> editarProducto(@RequestBody Producto producto, Proveedor id){
+        //return ResponseEntity.ok(servicio.guardar(producto));
+    //}
 
     @CrossOrigin(origins = "*")
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> eliminar(@PathVariable(value="id") Integer id){
+    public ResponseEntity<?> eliminar(@PathVariable Integer id){
         Optional<Producto> producto = servicio.buscarPorId(id);
         if (producto.isPresent()) {
             servicio.eliminar(id);
-            return ResponseEntity.ok(producto);
+            return ResponseEntity.noContent().build();
         }
         return ResponseEntity.notFound().build();
     }
