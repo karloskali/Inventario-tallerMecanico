@@ -82,7 +82,7 @@ public class ProductoController {
 
     @CrossOrigin(origins = "*")
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> eliminar(@PathVariable Integer id){
+    public ResponseEntity<Producto> eliminar(@PathVariable Integer id){
         Optional<Producto> producto = servicio.buscarPorId(id);
         if (producto.isPresent()) {
             servicio.eliminar(id);
