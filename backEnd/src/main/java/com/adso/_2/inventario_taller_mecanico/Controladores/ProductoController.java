@@ -3,6 +3,7 @@ package com.adso._2.inventario_taller_mecanico.Controladores;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -47,8 +48,9 @@ public class ProductoController {
 
     @CrossOrigin(origins = "*")
     @PostMapping
-    public ResponseEntity<?> crearProductos(@RequestBody Producto producto){
-        return ResponseEntity.ok(servicio.guardar(producto));
+    public ResponseEntity<Producto> crearProductos(@RequestBody ProductoDTO productoDTO){
+        Producto productoCreado = servicio.crearProducto(productoDTO);
+        return ResponseEntity.status(HttpStatus.CREATED).body(productoCreado);
     }
 
     @CrossOrigin(origins = "*")

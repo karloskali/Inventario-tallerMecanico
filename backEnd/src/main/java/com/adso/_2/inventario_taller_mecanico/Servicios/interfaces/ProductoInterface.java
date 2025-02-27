@@ -14,4 +14,6 @@ public interface ProductoInterface {
     public Producto guardar(Producto producto);
     public void eliminar(Integer id);
 
+    public Producto crearProducto(ProductoDTO productoDTO);
+
 }

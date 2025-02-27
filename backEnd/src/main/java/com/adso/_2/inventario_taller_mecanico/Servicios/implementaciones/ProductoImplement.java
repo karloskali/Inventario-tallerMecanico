@@ -24,7 +24,6 @@ public class ProductoImplement implements ProductoInterface {
     @Autowired
     private ProveedorRepository proveedorRepositorio;
 
-
     @Override
     public List<Producto> listarTodos(){
         return productoRepositorio.findAll();
@@ -33,6 +32,31 @@ public class ProductoImplement implements ProductoInterface {
     @Override
     public Optional<Producto> buscarPorId(Integer id){
         return productoRepositorio.findById(id);
+    }
+
+    @Override
+    public Producto crearProducto(ProductoDTO productoDTO) {
+        Producto producto = new Producto();
+        producto.setId(productoDTO.getId());
+        producto.setNombre(productoDTO.getNombre());
+        producto.setCantidad(productoDTO.getCantidad());
+        producto.setStock(productoDTO.getStock());
+        producto.setMarca(productoDTO.getMarca());
+        producto.setModelo(productoDTO.getModelo());
+        producto.setPrecio(productoDTO.getPrecio());
+        producto.setUbicacion(productoDTO.getUbicacion());
+        producto.setDescripcion(productoDTO.getDescripcion());
+
+        // Buscar el proveedor por nombre
+        Optional<Proveedor> optProveedor = proveedorRepositorio.findByNombre(productoDTO.getNombreProveedor());
+        if (optProveedor.isPresent()) {
+            producto.setProveedor(optProveedor.get());
+        } else {
+            // Puedes optar por crear un nuevo proveedor o lanzar un error
+            throw new RuntimeException("Proveedor no encontrado con el nombre: " + productoDTO.getNombreProveedor());
+        }
+        
+        return productoRepositorio.save(producto);
     }
 
     @Override

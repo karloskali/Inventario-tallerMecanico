@@ -33,7 +33,7 @@ public class ProveedorImplement implements ProveedorInterface {
         return repositorio.findByNombre(Nombre);
     }
 
-     @Override
+    @Override
     public Proveedor guardar(Proveedor proveedor){
         return repositorio.save(proveedor);
     }
