@@ -34,6 +34,13 @@ public class ProductoImplement implements ProductoInterface {
         return productoRepositorio.findById(id);
     }
 
+    /* metodo para buscar
+     * @Override
+    public Optional<Producto> findByNombre(String Nombre){
+        return productoRepositorio.findByNombre(Nombre);
+    }
+     */
+    
     @Override
     public Producto crearProducto(ProductoDTO productoDTO) {
         Producto producto = new Producto();

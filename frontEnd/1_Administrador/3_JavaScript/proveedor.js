@@ -28,8 +28,6 @@ function listar_proveedor() {
 }
 
 
-
-
 function nuevo_proveedor() {
     console.log("Llamado a nuevo proveedor");
 
@@ -74,8 +72,8 @@ function validarCampos(formSelector) {
 }
 
 
-// Función para obtener un producto por su ID y cargar sus datos en el formulario de edición
-function obtener_producto(id) {
+// Función para obtener un proveedor por su ID y cargar sus datos en el formulario de edición
+function obtener_proveedor(id) {
     console.log("Llamado obtener producto");
     var url2 = urlServicioWebProductos + "/" + id;
 
@@ -102,8 +100,8 @@ function obtener_producto(id) {
     });
 }
 
-// Función para actualizar un producto existente
-function actualizar_producto() {
+// Función para actualizar un proveedor existente
+function actualizar_proveedor() {
     console.log("Llamado a actualizar producto");
     var data = convertirFormDataAJSON($("#formEditar"));
     var resultado = function(response) {
@@ -124,8 +122,8 @@ function actualizar_producto() {
     });
 }
 
-// Función para confirmar y mostrar datos antes de eliminar un producto
-function pre_eliminar_producto(id) {
+// Función para confirmar y mostrar datos antes de eliminar un proveedor
+function pre_eliminar_proveedor(id) {
     console.log("Llamado pre eliminar producto");
     var url2 = urlServicioWebProductos + "/" + id;
 
@@ -145,8 +143,8 @@ function pre_eliminar_producto(id) {
     });
 }
 
-// Función para eliminar un producto
-function eliminar_producto() {
+// Función para eliminar un proveedor
+function eliminar_proveedor() {
     console.log("Llamado a eliminar producto");
     var id = $("#formEliminar #id").val();
     var url2 = urlServicioWebProductos + "/" + id;
@@ -177,15 +175,15 @@ function buscar_proveedor() {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        url: urlServicioWebProductos,
+        url: urlServicioWebProveedor,
         data: data,
         dataType: "json",
         success: function(response) {
             var items = [];
-            $.each(response, function(index, producto) {
-                items.push("<tr><td>" + producto.id + "</td><td>" + producto.nombre + "</td><td>" + producto.precio + "</td><td>" + producto.cantidad + "</td><td>" + producto.ubicacion + "</td><td>" + producto.stock + "</td><td><a class='btn btn-success' href='actualizar.html?id=" + producto.id + "'>Editar</a> <a class='btn btn-danger' href='eliminar.html?id=" + producto.id + "'>Eliminar</a></td></tr>");
+            $.each(response, function(index, proveedor) {
+                items.push("<tr><td>" + proveedor.id + "</td><td>" + proveedor.nombre + "</td><td>" + proveedor.nit + "</td><td>" + proveedor.email + "</td><td>" + proveedor.direccion + "</td><td>" + proveedor.telefono + "</td><td><a class='btn btn-success' href='actualizar.html?id=" + proveedor.id + "'>Editar</a> <a class='btn btn-danger' href='eliminar.html?id=" + proveedor.id + "'>Eliminar</a></td></tr>");
             });
-            $("#listar_productos").html("<table class='table table-hover'><thead><tr><th>ID</th><th>Nombre</th><th>Precio</th><th>Cantidad</th><th>Ubicación</th><th>Stock</th><th>Opciones</th></tr></thead><tbody>" + items.join("") + "</tbody></table>");
+            $("#listar_proveedor").html("<table class='table table-hover'><thead><tr><th>ID</th><th>Nombre</th><th>Nit</th><th>Email</th><th>Dirección</th><th>Telefono</th><th>Opciones</th></tr></thead><tbody>" + items.join("") + "</tbody></table>");
         }
     });
 }

@@ -6,5 +6,5 @@ import com.adso._2.inventario_taller_mecanico.Entidades.Producto;
 
 public interface ProductoRepository extends JpaRepository<Producto, Integer> {
     
-    
+    //Optional<Producto> findByNombre(String Nombre); metodo para buscar
 }

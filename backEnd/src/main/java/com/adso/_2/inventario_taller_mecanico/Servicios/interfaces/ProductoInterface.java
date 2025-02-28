@@ -16,4 +16,6 @@ public interface ProductoInterface {
 
     public Producto crearProducto(ProductoDTO productoDTO);
 
+    //public Optional<Producto> findByNombre(String Nombre); metodo para buscar
+
 }

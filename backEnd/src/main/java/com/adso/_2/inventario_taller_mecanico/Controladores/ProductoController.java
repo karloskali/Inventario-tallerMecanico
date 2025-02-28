@@ -44,8 +44,15 @@ public class ProductoController {
         }
         return ResponseEntity.notFound().build();
     }
-    
 
+    /* metodo para buscar
+     * @CrossOrigin(origins = "*")
+    @PatchMapping
+    public ResponseEntity<?> findByNombre(@RequestBody Producto producto){
+        return ResponseEntity.ok(servicio.findByNombre(producto.getNombre()));
+    }
+     */
+    
     @CrossOrigin(origins = "*")
     @PostMapping
     public ResponseEntity<Producto> crearProductos(@RequestBody ProductoDTO productoDTO){

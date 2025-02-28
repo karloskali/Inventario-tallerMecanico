@@ -86,15 +86,10 @@
                 <div class="col-md-10 bg-white"> <!-- Aumentado de col-md-8 a col-md-10 -->
                     <form action="" id="formBuscar" class="d-flex mt-3">
                         <input class="form-control me-2" type="text" placeholder="Buscar" name="texto" id="texto">
-                        <button class="btn btn-primary" type="button">Buscar</button>
+                        <button class="btn btn-primary" onclick="buscar_proveedor();" type="button">Buscar</button>
                     </form>
                     <div class="table-responsive mt-3">
-                        <table class="table table-striped table-bordered w-100">
-                            <tr><th>NIT</th><th>Nombre</th><th>Dirección</th><th>Email</th><th>Teléfono</th><th>Cámara de Comercio</th><th>RUT</th><th>Certificado Bancario</th><th colspan="2">Opciones</th></tr>
-                            <tr><td>123456789</td><td>Proveedor A</td><td>Calle 123</td><td>proveedorA@example.com</td><td>3001234567</td><td>987654321</td><td>ABC123</td><td>Cert001.pdf</td><td><a href="editar.html" class="btn btn-success">Editar</a></td><td><a href="eliminar.html" class="btn btn-danger">Eliminar</a></td></tr>
-                            <tr><td>987654321</td><td>Proveedor B</td><td>Carrera 45</td><td>proveedorB@example.com</td><td>3109876543</td><td>123456789</td><td>DEF456</td><td>Cert002.pdf</td><td><a href="editar.html" class="btn btn-success">Editar</a></td><td><a href="eliminar.html" class="btn btn-danger">Eliminar</a></td></tr>
-                            <tr><td>135792468</td><td>Proveedor C</td><td>Avenida 10</td><td>proveedorC@example.com</td><td>3201357924</td><td>654321987</td><td>GHI789</td><td>Cert003.pdf</td><td><a href="editar.html" class="btn btn-success">Editar</a></td><td><a href="eliminar.html" class="btn btn-danger">Eliminar</a></td></tr>
-                        </table>
+    
                     </div>
                 </div>
                 <div class="col-md-1"></div> <!-- Reducido de col-md-2 a col-md-1 -->
@@ -107,6 +102,6 @@
 
     <script src="../3_JavaScript/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="../3_JavaScript/proveedores.js"></script>
+    <script src="../../3_JavaScript/proveedor.js"></script>
 </body>
 </html>

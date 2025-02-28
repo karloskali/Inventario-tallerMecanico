@@ -32,6 +32,7 @@ function login() {
             } else {
                 let rol = response.rol.nombre;
                 console.log(rol);
+
                 if (rol === "administrador") {
                    // Redirige al usuario a la página administrador
                     window.location.href = "../../1_Administrador/1_Html/resumenInventario.html";     
